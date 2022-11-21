@@ -66,9 +66,7 @@ CastBait = function(rodHandle, castLocation)
 
     -- DrawBusySpinner("Waiting for a fish that is biting..")
     QBCore.Functions.Notify("Waiting for a fish to bite...", "success", "10000")
-    TriggerServerEvent('QBCore:Server:RemoveItem', "fishingbait", 1)
-	TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["fishingbait"], "remove")
-
+	TriggerServerEvent('qb-fishing:removebait')
     local interupted = false
 
     Wait(1000)
